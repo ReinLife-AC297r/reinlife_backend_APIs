@@ -1,13 +1,15 @@
+
 # flask_reinlife
  backend of relearnlife
 
-# Create Envionement
+## Environment Configuration
+### Create Envionement
  
  conda activate relearnlife
  conda install flask requests
 
-# Save Env
+### Save Env
  conda env export > environment.yml
 
-# Recreate Env
+### Recreate Env
  conda env create -f environment.yml
