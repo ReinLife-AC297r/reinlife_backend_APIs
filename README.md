@@ -1,10 +1,10 @@
 
-# flask_reinlife
+# ReinLife_Flask
  backend of ReinLife
 
  ReinLife is an cross-platform open source mobile Health app and research platform.
  
- The frontend is written in flutter and can be found at XXX.
+ The frontend is written in flutter and can be found at [reinlife_flutter](https://github.com/boerz-coding/reinlife_flutter/tree/main).
 
 # Current Workflow
 1. Recreate python/anaconda environment using environment.yml (My only extra package is Flask)
