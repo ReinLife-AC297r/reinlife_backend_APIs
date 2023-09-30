@@ -14,4 +14,5 @@
  conda env create -f environment.yml
 ## files
 app.py is the draft of the main app.
+
 changewords.py is a utility script to send new words to the port. The new word is currently hardcoded in this file.
