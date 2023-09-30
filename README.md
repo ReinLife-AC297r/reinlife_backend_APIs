@@ -21,7 +21,11 @@
  conda env export > environment.yml)
 -->
 ### Recreate Env
- conda env create -f environment.yml
+I am using anaconda to create the environment. Here are the steps to repeat the envionment.
+```
+conda env create -f environment.yml
+conda activate reinlife
+```
 ## files
 app.py is the draft of the main app.
 
