@@ -2,5 +2,9 @@
 *.pyc
 .DS_Store
 *.swp
-*.ipynb
+
 reinlife-915bd-firebase-adminsdk-hydd2-96cf9b9942.json
+.ipynb_checkpoints/MLnotification-checkpoint.ipynb
+.ipynb_checkpoints/Researcher_side_functions-checkpoint.ipynb
+.ipynb_checkpoints/SchedulerCode-checkpoint.ipynb
+.ipynb_checkpoints/TestFlaskServer-checkpoint.ipynb
