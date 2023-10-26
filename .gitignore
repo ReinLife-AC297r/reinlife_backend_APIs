@@ -1,3 +1,6 @@
 
 *.pyc
 .DS_Store
+*.swp
+*.ipynb
+reinlife-915bd-firebase-adminsdk-hydd2-96cf9b9942.json
