@@ -1,5 +1,5 @@
 {
-    "Questionnaire1": [
+    "Questionnaire1auto": [
         {
             "questionId": 1,
             "questionText": "How many hours did you sleep yesterday?",
@@ -19,7 +19,7 @@
             "options": ["Yes", "No"]
         }
     ],
-    "Questionnaire2": [
+    "Questionnaire2auto": [
         {
             "questionId": 1,
             "questionText": "Question from Q2?",
