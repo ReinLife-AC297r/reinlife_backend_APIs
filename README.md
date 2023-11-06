@@ -9,7 +9,7 @@
 
 # Current Workflow
 1. Recreate python/anaconda environment using environment.yml
-2. `example_researcher_defined_code.ipynb` is a jupyter notebook that contains the example code of of the API should be used. The APIs are in the module `ReinLifeResearcher.py`
+2. Researchers can look at `example_researcher_defined_code.ipynb` which is a jupyter notebook that contains the example code of of the API should be used. The APIs are in the module `ReinLifeResearcher.py`
 
 
 ## Environment Configuration
