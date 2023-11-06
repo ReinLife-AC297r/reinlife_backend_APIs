@@ -1,6 +1,6 @@
 
 # ReinLife_Flask
- backend of ReinLife app (mHealth platform).
+ Backend for ReinLife app (mHealth platform).
 
  ReinLife is going to be a cross-platform open source mobile Health app and research platform.
  We name the backend as "ReinLife_Flase" but currently we are not using Flask. We are using Google firebase service.
