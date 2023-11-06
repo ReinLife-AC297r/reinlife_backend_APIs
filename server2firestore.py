@@ -1,5 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
+from datetime import datetime
 
 # Initialize Firebase Admin SDK
 #cred = credentials.Certificate("./reinlife-915bd-firebase-adminsdk-hydd2-96cf9b9942.json")
@@ -83,4 +84,17 @@ def list_all_userid():
 
     print(doc_ids)
     return doc_ids
+
+def notification2db(Userid, message):
+    """
+    function for saving notification to database
+    """
+    collection_notification=db.collection('Users').document(Userid).collection('notification record')
+    collection_notification.add({
+        'message': message,
+        'time': datetime.now() 
+    })
+    
+    print(f"saved notification \"{message}\" to database!")
+    return
 

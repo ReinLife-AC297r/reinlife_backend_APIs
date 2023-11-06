@@ -1,17 +1,14 @@
-
-
-#This package is supposed to be researcher side package. The researchers should communicate with
+#This package is supposed to be researcher side package. The researchers should communicate with the database using this package.
 import json
-import server2firestore
 
+#The server2firestore.py file is a module that provide helper functions to interact with the database
+import server2firestore
 from server2firestore import get_answers as get_answers
 from server2firestore import list_all_userid as list_all_userid
+from server2firestore import notification2db as notification2db
 
 
 default_inputfile='./experiment_info.json'
-
-
-
 
 
 
@@ -23,12 +20,6 @@ def readjson(filename):
         data = json.load(file)
     return data
 
-# def login():
-#     pass
-
-
-
-
 
 
 def set_experiment(inputfile='./experiment_info.json'):
@@ -36,25 +27,21 @@ def set_experiment(inputfile='./experiment_info.json'):
     function to set the experiment information
     """ 
     
-    #load experiment data from inputfile
+    #read experiment data from user defined input file
     expdata = readjson(inputfile)
-    #load experiment id from loginfile
-    #myexpid = calc_expid(loginfile)
     
-    #This is our current implementation
+    #upload data to firestore
     return server2firestore.save_exp_to_firebase(expdata)
     
     
     
 def set_questionnaires(inputfile='./questionnaires.json'):
     
-    #load questionnaire data
+    #read questionnaire data from user defined input file
     qdata=readjson(inputfile)
-    #load experiment id
-    #myexpid = calc_expid(loginfile)
     
-    #upload expdata to server
-    #This is our current implementation
+   
+    #upload data to firestore
     return server2firestore.save_qn_to_firebase(qdata)
 
 
