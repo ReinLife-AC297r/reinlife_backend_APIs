@@ -48,14 +48,14 @@ def get_answers(Userid,option='latest'):
     exp_ref = db
         
     users_with_specific_uid = exp_ref.collection('Users').document(Userid)
+    print(f"getting answers of User:{Userid}, option: {option}")
     if option=='all':
-        print(f"get User:{Userid} answers: all")
         answers = users_with_specific_uid.collection('user answers').stream()
         myanswers=[answer_doc.to_dict()['answers'] for answer_doc in answers]
         for answer in myanswers:
             print(answer)
     elif option=='latest':
-        print(f"get User:{Userid} answers: latest")
+        
         latest_answer = users_with_specific_uid.collection('user answers').order_by('time', direction=firestore.Query.DESCENDING).limit(1).stream()
         
         for answer_doc in latest_answer:
