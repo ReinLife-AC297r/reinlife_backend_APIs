@@ -28,6 +28,8 @@ conda activate reinlife
 ```
 ## files
 `ReinLifeResearcher.py` is the module that contains APIs for researchers to use
+
 `server2firestore.py` is a module that contains helper functions to communcate with the firestore. We do not currently have an extra server layer in our current implementation although it is named as "server"2firstore.
+
 `example_researcher_defined_code.ipynb` is a jupyter notebook that contains the example code of of the API should be used.
 
