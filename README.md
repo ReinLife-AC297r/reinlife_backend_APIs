@@ -1,15 +1,15 @@
 
 # ReinLife_Flask
- backend of ReinLife
+ backend of ReinLife app (mHealth platform).
 
- ReinLife is an cross-platform open source mobile Health app and research platform.
+ ReinLife is going to be a cross-platform open source mobile Health app and research platform.
+ We name the backend as "ReinLife_Flase" but currently we are not using Flask. We are using Google firebase service.
  
- The frontend is written in flutter and can be found at [reinlife_flutter](https://github.com/boerz-coding/reinlife_flutter/tree/main).
+ The frontend is written in flutter and can be found at [reinlife_flutter](https://github.com/ReinLife-AC297r/reinlife_flutter).
 
 # Current Workflow
-1. Recreate python/anaconda environment using environment.yml (My only extra package is Flask)
-2. do `python app.py` or `flask run`
-3. Optionally, one can run `python changeword.py` to change the word that will be passed to the frontend.
+1. Recreate python/anaconda environment using environment.yml
+2. Researchers can look at `example_researcher_defined_code.ipynb` which is a jupyter notebook that contains the example code of of the API should be used. The APIs are in the module `ReinLifeResearcher.py`
 
 
 ## Environment Configuration
@@ -27,6 +27,9 @@ conda env create -f environment.yml
 conda activate reinlife
 ```
 ## files
-app.py is the draft of the main app.
+`ReinLifeResearcher.py` is the module that contains APIs for researchers to use
 
-changewords.py is a utility script to send new words to the port. The new word is currently hardcoded in this file.
+`server2firestore.py` is a module that contains helper functions to communcate with the firestore. We do not currently have an extra server layer in our current implementation although it is named as "server"2firstore.
+
+`example_researcher_defined_code.ipynb` is a jupyter notebook that contains the example code of of the API should be used.
+
