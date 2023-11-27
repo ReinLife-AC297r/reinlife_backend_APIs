@@ -32,7 +32,9 @@ def save_qn_to_firebase(data):
     questionnaires_ref=db.collection('Questionnaires')
     for questionnaire_name, questions in data.items():
         doc_ref = questionnaires_ref.document(questionnaire_name)
-        doc_ref.set({"questions": questions})   
+        
+        #doc_ref.set({})  
+        doc_ref.set({"questions": questions,"questionnaireId":questionnaire_name})
     return
 
 
