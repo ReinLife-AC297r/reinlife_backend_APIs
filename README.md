@@ -9,10 +9,11 @@ We are using Google Firebase service and Python to build our backend. This docum
 The frontend is written in flutter and can be found at [reinlife_flutter](https://github.com/ReinLife-AC297r/reinlife_flutter).
 
 # Current Workflow
-##Creating a new Firebase project
+## Creating a new Firebase project
+
 To manage their own backend, the researchers are supposed to create their own Firebase project.
 
-##Running python code
+## Running python code
 1. Recreate python/anaconda environment using environment.yml
 2. Researchers can look at `example_researcher_defined_code.ipynb` which is a jupyter notebook that contains the example code of of the API should be used. The APIs are in the module `ReinLifeResearcher.py`
 
