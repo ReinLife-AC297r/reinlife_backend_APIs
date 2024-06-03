@@ -34,7 +34,7 @@ def save_qn_to_firebase(data):
         doc_ref = questionnaires_ref.document(questionnaire_name)
         
         #doc_ref.set({})  
-        doc_ref.set({"questions": questions,"questionnaireId":questionnaire_name})
+        doc_ref.set(questions)
     return
 
 

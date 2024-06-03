@@ -1,29 +1,26 @@
 {
-    "Questionnaire1auto": [
-        {
-            "questionId": 1,
-            "questionText": "How many hours did you sleep yesterday?",
-            "questionType": "Open Text"
-        },
-        {
-            "questionId": 2,
-            "questionText": "What is your mood today?",
-            "questionType": "Rating Scale",
-            "minValue": 1,
-            "maxValue": 5
-        },
-        {
-            "questionId": 3,
-            "questionText": "Have you followed the sleep improving guideline?",
-            "questionType": "Multiple Choice",
-            "options": ["Yes", "No"]
-        }
-    ],
-    "Questionnaire2auto": [
-        {
-            "questionId": 1,
-            "questionText": "Question from Q2?",
-            "questionType": "Open Text"
-        }
-    ]
+    "questionnaire1": {
+        "questionnaireId": 1,
+        "questions": [ 
+            {
+                "questionId": 1,
+                "questionText": "How many hours did you sleep yesterday?",
+                "questionType": "Open Text"
+            },
+            {
+                "questionId": 2,
+                "questionText": "What is your mood today?",
+                "questionType": "Rating Scale",
+                "minValue": 1,
+                "maxValue": 5
+            },
+            {
+                "questionId": 3,
+                "questionText": "Have you followed the sleep improving guideline?",
+                "questionType": "Multiple Choice",
+                "options": ["Yes", "No"]
+            }
+        ]
+    }
 }
+
