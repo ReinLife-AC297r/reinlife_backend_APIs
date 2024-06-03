@@ -1,6 +1,7 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
 from datetime import datetime
+from pytz import timezone
 
 # Initialize Firebase Admin SDK
 #cred = credentials.Certificate("./reinlife-915bd-firebase-adminsdk-hydd2-96cf9b9942.json")
@@ -31,7 +32,9 @@ def save_qn_to_firebase(data):
     questionnaires_ref=db.collection('Questionnaires')
     for questionnaire_name, questions in data.items():
         doc_ref = questionnaires_ref.document(questionnaire_name)
-        doc_ref.set({"questions": questions})   
+        
+        #doc_ref.set({})  
+        doc_ref.set(questions)
     return
 
 
@@ -85,16 +88,40 @@ def list_all_userid():
     print(doc_ids)
     return doc_ids
 
-def notification2db(Userid, message):
+def notification2db(Userid, message='',title='',option='message',questionnaireID=0):
     """
     function for saving notification to database
     """
-    collection_notification=db.collection('Users').document(Userid).collection('notification record')
-    collection_notification.add({
-        'message': message,
-        'time': datetime.now() 
-    })
+    tz = timezone('UTC')
+    current_time = datetime.now()
+    timestamp = current_time.timestamp()
+    n_str = str(int(timestamp))+option
+    collection_notification=db.collection('Users').document(Userid).collection('notification record').document(n_str)
+    if option == 'message':
+        #Boer Nov11: Should better check whether the message is empty
+        collection_notification.set({
+            'nTitle': message,
+            'nId':-1,
+            'nType': 'message',
+            'message': message,
+            'time': current_time
+        })
+        print(f"saved notification \"{message}\" to database!")
+    elif option == 'questionnaire':
+        #Boer Nov11: Should better do some check 
+        if title=='':
+            title= 'We have new survey for you'
+        collection_notification.set({
+            'nTitle': title,
+            'nId':questionnaireID,
+            'nType': 'questionnaire',
+            'time': current_time 
+        })
+        print(f"saved questionnaire reminder, title: \"{title}\"  ID: \"{questionnaireID}\" to database!")
+        
+    else:
+        raise NotImplementedError("notification can only be message or questionnaire")
+        
     
-    print(f"saved notification \"{message}\" to database!")
     return
 
