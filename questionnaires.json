@@ -4,7 +4,7 @@
         "questions": [ 
             {
                 "questionId": 1,
-                "questionText": "How many hours did you sleep yesterday?",
+                "questionText": "What did you eat for dinnner yesterday? (broccoli,asparagus,other food)",
                 "questionType": "Open Text"
             },
             {
@@ -21,13 +21,13 @@
                 "options": ["Yes", "No"]
             }
         ]
-    }
+    },
     "questionnaire2": {
         "questionnaireId": 2,
         "questions": [ 
             {
                 "questionId": 1,
-                "questionText": "What did you eat for dinnner yesterday?",
+                "questionText":  "How many hours did you sleep yesterday?",
                 "questionType": "Open Text"
             },
             {
@@ -36,7 +36,7 @@
                 "questionType": "Rating Scale",
                 "minValue": 1,
                 "maxValue": 5
-            },
+            }
         ]
     }
 }
